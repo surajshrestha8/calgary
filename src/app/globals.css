@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f9f8f4;
+  --color-paper-2: #f2f1eb;
+  --color-ink: #1a2426;
+  --color-ink-2: #2d383a;
+  --color-ink-3: #4a5456;
+  --color-amber: #ff6b35;
+  --color-amber-deep: #e85a20;
+  
+  --font-narrow: "Inter Tight", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased selection:bg-amber/30;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  /* Custom utility for outlined buttons */
+  .btn-outline {
+    @apply border border-ink/20 py-3 px-8 rounded-full font-narrow font-bold text-[14px] uppercase tracking-[0.05em] transition-all duration-300 hover:bg-ink hover:text-paper hover:border-ink inline-flex items-center gap-2;
+  }
+
+  .btn-primary, .btn-amber {
+    @apply bg-amber py-3 px-8 rounded-full font-narrow font-bold text-[14px] uppercase tracking-[0.05em] text-paper transition-all duration-300 hover:bg-amber-deep hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber/20 inline-flex items-center gap-2;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
