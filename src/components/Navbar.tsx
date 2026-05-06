@@ -9,14 +9,12 @@ export function Navbar() {
   return (
     <nav className="relative z-10 border-b border-ink/10 backdrop-blur-md bg-paper/92">
       <div className="container flex justify-between items-center py-4.5">
-        <a href="#" className="flex items-center gap-3 font-narrow font-extrabold text-[20px] uppercase tracking-[0.02em] shrink-0">
-          <div className="w-[38px] h-[38px] bg-ink text-amber flex items-center justify-center font-mono font-bold text-[14px] rounded-[4px] relative after:content-[''] after:absolute after:-top-[3px] after:-left-[3px] after:w-full after:h-full after:border after:border-amber after:rounded-[4px] after:pointer-events-none">
-            CP
-          </div>
-          <div className="whitespace-nowrap">
-            Calgary Prep Center
-            <small className="block text-[9px] font-medium tracking-[0.18em] text-ink-3 mt-0.5">3PL · FBA · FBM · STORAGE</small>
-          </div>
+        <a href="#" className="flex items-center shrink-0 py-0.5">
+          <img
+            src="/logo/logo.jfif"
+            alt="Calgary Prep Center"
+            className="h-9 w-auto max-h-11 sm:h-10 md:h-11 max-w-[min(100%,260px)] object-contain object-left"
+          />
         </a>
 
         {/* Desktop Links */}

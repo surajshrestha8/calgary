@@ -33,8 +33,8 @@ export function Contact() {
               <ContactRow 
                 icon={<Phone size={18} />} 
                 label="Phone" 
-                value="+1 (403) 555-0199" 
-                href="tel:+14035550199"
+                value="+1 (825) 561-7356" 
+                href="tel:+1 (825) 561-7356"
               />
               <ContactRow 
                 icon={<Mail size={18} />} 
