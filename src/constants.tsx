@@ -128,14 +128,14 @@ export const WHY_US_POINTS = [
 ];
 
 export const PLATFORMS = [
-  { name: "Amazon CA", icon: "amazon" },
-  { name: "Amazon US", icon: "amazon" },
-  { name: "Walmart", icon: "walmart" },
-  { name: "Shopify", icon: "shopify" },
-  { name: "TikTok Shop", icon: "tiktok" },
-  { name: "Etsy", icon: "etsy" },
-  { name: "eBay", icon: "ebay" },
-  { name: "SPN", icon: "amazon" },
+  { name: "Amazon CA", logo: "/platforms/amazon-ca.png" },
+  { name: "Amazon US", logo: "/platforms/amazon.png" },
+  { name: "Walmart", logo: "/platforms/wallmart.png" },
+  { name: "Shopify", logo: "/platforms/shopify.png" },
+  { name: "TikTok Shop", logo: "/platforms/tiktok-shop.png" },
+  { name: "Etsy", logo: "/platforms/etsy.png" },
+  { name: "eBay", logo: "/platforms/ebay.png" },
+  { name: "SPN", logo: "/platforms/amazon.png" },
 ];
 
 export const PRICING_PLANS = [

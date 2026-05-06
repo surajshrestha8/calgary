@@ -16,13 +16,12 @@ export function Platforms() {
                 className="flex flex-col items-center gap-2 group cursor-default"
                 title={p.name}
               >
-                <div className="w-12 h-12 flex items-center justify-center grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:-translate-y-1">
-                   <img 
-                    src={`https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/${p.icon}.svg`} 
-                    alt={p.name} 
-                    className="w-8 h-8 object-contain"
-                    style={{ filter: 'invert(8%) sepia(12%) saturate(934%) hue-rotate(167deg) brightness(93%) contrast(93%)' }} /* Approximate var(--ink) */
-                   />
+                <div className="h-11 min-w-[5.5rem] max-w-[7.5rem] flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1">
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="max-h-9 w-full object-contain object-center"
+                  />
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-wider text-ink-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   {p.name}

@@ -7,7 +7,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-[100] border-b border-ink/10 backdrop-blur-md bg-paper/92">
+    <nav className="relative z-10 border-b border-ink/10 backdrop-blur-md bg-paper/92">
       <div className="container flex justify-between items-center py-4.5">
         <a href="#" className="flex items-center gap-3 font-narrow font-extrabold text-[20px] uppercase tracking-[0.02em] shrink-0">
           <div className="w-[38px] h-[38px] bg-ink text-amber flex items-center justify-center font-mono font-bold text-[14px] rounded-[4px] relative after:content-[''] after:absolute after:-top-[3px] after:-left-[3px] after:w-full after:h-full after:border after:border-amber after:rounded-[4px] after:pointer-events-none">
@@ -57,7 +57,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-paper border-b border-ink/10 overflow-hidden"
+            className="lg:hidden absolute top-full left-0 right-0 z-20 bg-paper border-b border-ink/10 overflow-hidden shadow-lg"
           >
             <ul className="flex flex-col gap-4.5 p-6 font-medium">
               {NAV_LINKS.map((link) => (

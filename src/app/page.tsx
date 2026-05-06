@@ -18,10 +18,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <TopBar />
-      <Navbar />
+      <div className="sticky top-0 z-[100]">
+        <Navbar />
+        <Marquee />
+      </div>
       <main>
         <Hero />
-        <Marquee />
         <Services />
         <Process />
         <WhyUs />
