@@ -45,7 +45,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2.5">
               <li><a href="tel:+14035550199" className="text-paper/70 text-[14px] hover:text-amber transition-colors">+1 (403) 555-0199</a></li>
               <li><a href="mailto:hello@calgaryprep.ca" className="text-paper/70 text-[14px] hover:text-amber transition-colors">hello@calgaryprep.ca</a></li>
-              <li className="text-paper/70 text-[14px]">Calgary, AB · Canada</li>
+              <li className="text-paper/70 text-[14px]">401 33 St NE #3, Calgary, AB T2A 1X5 </li>
               <li className="text-paper/70 text-[14px]">Mon–Sat · 9–6 MT</li>
             </ul>
           </FooterCol>
@@ -74,3 +74,4 @@ function FooterCol({ title, children }: { title: string, children: ReactNode }) 
     </div>
   );
 }
+ 

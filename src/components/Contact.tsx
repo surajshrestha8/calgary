@@ -28,7 +28,7 @@ export function Contact() {
               <ContactRow 
                 icon={<MapPin size={18} />} 
                 label="Warehouse" 
-                value="Calgary, Alberta · Canada" 
+                value="401 33 St NE #3, Calgary, AB T2A 1X5"
               />
               <ContactRow 
                 icon={<Phone size={18} />} 
