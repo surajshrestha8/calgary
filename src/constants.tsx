@@ -45,7 +45,7 @@ export const SERVICES: Service[] = [
     name: "Receiving & Inspection",
     desc: "We accept your shipments, count units, photograph damage, and confirm quantities — same-day notifications via email or portal.",
     icon: <Warehouse size={26} />,
-    image: "/services/receiving-inspection.svg",
+    image: "/services/receiving-inspection.jpg",
     imageAlt: "Warehouse receiving area with boxes ready for inspection",
   },
   {
@@ -69,7 +69,7 @@ export const SERVICES: Service[] = [
     name: "Bundling & Kitting",
     desc: "Multi-packs, gift sets, subscription boxes — we assemble custom bundles and kits ready for retail or marketplace listings.",
     icon: <Package size={26} />,
-    image: "/services/bundling-kitting.svg",
+    image: "/services/bundling-kitting.jpeg",
     imageAlt: "Kitting table with grouped products and bundle packaging",
   },
   {
@@ -77,7 +77,7 @@ export const SERVICES: Service[] = [
     name: "Inventory Storage",
     desc: "Climate-controlled, secure pallet and shelf storage in our Calgary facility. Pay only for the space you use, by the month.",
     icon: <ClipboardList size={26} />,
-    image: "/services/inventory-storage.svg",
+    image: "/services/inventory-storage.png",
     imageAlt: "Organized pallet storage and inventory shelves",
   },
   {
@@ -85,7 +85,7 @@ export const SERVICES: Service[] = [
     name: "Returns Processing",
     desc: "Inspect customer returns, restock sellable units, and dispose of or return damaged goods — keep your account healthy.",
     icon: <RotateCcw size={26} />,
-    image: "/services/returns-processing.svg",
+    image: "/services/returns-processing.jpg",
     imageAlt: "Returns processing desk with inspection checklist",
   },
 ];
