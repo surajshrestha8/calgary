@@ -12,7 +12,7 @@ export function TopBar() {
           <span className="whitespace-nowrap">OPEN MON–SAT · 9 AM – 6 PM MT</span>
         </div>
         <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-5.5">
-          <span className="flex items-center gap-1.5 whitespace-nowrap"><Phone size={12} /> (403) 555-0199</span>
+          <span className="flex items-center gap-1.5 whitespace-nowrap"><Phone size={12} />+1 (825) 561-7356 </span>
           <span className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} /> HELLO@CALGARYPREP.CA</span>
         </div>
       </div>
