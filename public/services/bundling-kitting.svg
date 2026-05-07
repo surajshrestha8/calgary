@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title">
+  <title id="title">Kitting table with grouped products and bundle packaging</title>
+  <rect width="640" height="400" fill="#f2f1eb"/>
+  <rect x="66" y="262" width="508" height="50" fill="#1a2426"/>
+  <rect x="96" y="118" width="108" height="112" fill="#ff6b35" stroke="#1a2426" stroke-width="6"/>
+  <rect x="246" y="92" width="148" height="138" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <rect x="436" y="130" width="108" height="100" fill="#ffffff" stroke="#1a2426" stroke-width="6"/>
+  <path d="M120 152h60M120 174h46M274 132h92M274 154h72M464 162h52M464 184h38" stroke="#1a2426" stroke-width="5"/>
+  <path d="M160 256c56 44 264 44 320 0" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round"/>
+  <path d="M490 236l34 26-38 20" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="228" y="272" width="184" height="62" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <path d="M250 302h140" stroke="#1a2426" stroke-width="5"/>
+</svg>

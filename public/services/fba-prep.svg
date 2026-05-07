@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title">
+  <title id="title">Amazon FBA prep station with label printer and packed units</title>
+  <rect width="640" height="400" fill="#f2f1eb"/>
+  <rect x="58" y="254" width="524" height="54" fill="#1a2426"/>
+  <rect x="96" y="96" width="164" height="120" fill="#ff6b35" stroke="#1a2426" stroke-width="6"/>
+  <path d="M96 136h164M178 96v120" stroke="#1a2426" stroke-width="4" opacity=".25"/>
+  <rect x="326" y="96" width="202" height="104" rx="8" fill="#1a2426"/>
+  <rect x="356" y="126" width="142" height="44" fill="#f9f8f4"/>
+  <path d="M372 140h86M372 154h112" stroke="#1a2426" stroke-width="5"/>
+  <rect x="358" y="200" width="138" height="70" fill="#ffffff" stroke="#1a2426" stroke-width="6"/>
+  <path d="M382 222h90M382 238h66" stroke="#1a2426" stroke-width="4"/>
+  <rect x="120" y="238" width="132" height="96" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <rect x="140" y="262" width="92" height="30" fill="#1a2426"/>
+  <path d="M154 272h64M154 282h46" stroke="#ff6b35" stroke-width="3"/>
+  <path d="M532 68l30 30-64 64-30-30z" fill="#ff6b35" stroke="#1a2426" stroke-width="6"/>
+</svg>

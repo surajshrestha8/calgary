@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title">
+  <title id="title">Fulfillment packing station with outbound parcels</title>
+  <rect width="640" height="400" fill="#f2f1eb"/>
+  <rect x="58" y="260" width="524" height="52" fill="#1a2426"/>
+  <rect x="88" y="126" width="138" height="116" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <path d="M88 164h138M157 126v116" stroke="#1a2426" stroke-width="4" opacity=".25"/>
+  <rect x="262" y="94" width="146" height="148" fill="#ff6b35" stroke="#1a2426" stroke-width="6"/>
+  <path d="M262 140h146M335 94v148" stroke="#1a2426" stroke-width="4" opacity=".28"/>
+  <rect x="442" y="148" width="116" height="94" fill="#ffffff" stroke="#1a2426" stroke-width="6"/>
+  <path d="M442 184h116M500 148v94" stroke="#1a2426" stroke-width="4" opacity=".25"/>
+  <path d="M112 324h416" stroke="#1a2426" stroke-width="8" stroke-linecap="round"/>
+  <path d="M462 66l54 26-54 26-54-26z" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <path d="M516 92v62l-54 28v-64M408 92v62l54 28" fill="none" stroke="#1a2426" stroke-width="6"/>
+  <path d="M462 118l54-26" stroke="#ff6b35" stroke-width="6"/>
+</svg>

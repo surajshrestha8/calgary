@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import { SERVICES } from '../constants';
 
 export function Services() {
@@ -8,7 +9,7 @@ export function Services() {
     <section className="bg-paper py-25" id="services">
       <div className="container">
         <div className="flex flex-wrap justify-between items-end gap-10 mb-15">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -20,7 +21,7 @@ export function Services() {
               Full-service <span className="text-amber-deep italic">3PL prep</span><br />under one roof.
             </h2>
           </motion.div>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -32,33 +33,40 @@ export function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10 border border-ink/10">
           {SERVICES.map((service, index) => (
-            <motion.div 
-              key={index}
+            <motion.div
+              key={service.id}
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-paper p-9.5 group relative cursor-pointer overflow-hidden transition-all duration-300"
+              className="bg-paper group relative min-h-[390px] cursor-pointer overflow-hidden transition-all duration-300"
             >
-              {/* Dark Hover Reveal */}
-              <div className="absolute top-0 left-0 w-full h-0 bg-ink transition-all duration-350 ease-out group-hover:h-full -z-0"></div>
-              
-              <div className="relative z-10 transition-colors duration-300 group-hover:text-paper">
-                <div className="font-mono text-[11px] tracking-[0.08em] text-ink-3 mb-6 transition-colors duration-300 group-hover:text-paper/60 uppercase">
-                  {service.id}
+              <Image
+                src={service.image}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover opacity-[0.18] grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-[0.22] group-hover:grayscale-0"
+                aria-hidden="true"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-paper/95 via-paper/90 to-paper/98 transition-opacity duration-300 group-hover:opacity-0"></div>
+              <div className="absolute top-0 left-0 w-full h-0 bg-ink/94 transition-all duration-350 ease-out group-hover:h-full"></div>
+
+              <div className="relative z-10 flex min-h-[390px] transition-colors duration-300 group-hover:text-paper">
+                <div className="flex flex-col justify-end p-7 sm:p-9.5">
+                  <div className="w-14 h-14 bg-ink text-amber flex items-center justify-center mb-6 rounded-[4px] transition-all duration-300 group-hover:bg-amber group-hover:text-ink">
+                    {service.icon}
+                  </div>
+                  <h3 className="font-narrow font-bold text-[24px] uppercase mb-3 text-ink transition-colors duration-300 group-hover:text-paper leading-[1.05]">
+                    {service.name}
+                  </h3>
+                  <p className="text-[15px] text-ink-3 mb-6 leading-[1.55] transition-colors duration-300 group-hover:text-paper/80">
+                    {service.desc}
+                  </p>
+                  <span className="font-narrow font-bold text-[12px] uppercase tracking-[0.08em] text-amber-deep inline-flex items-center gap-1.5 transition-colors duration-300 group-hover:text-amber">
+                    Learn More →
+                  </span>
                 </div>
-                <div className="w-14 h-14 bg-ink text-amber flex items-center justify-center mb-6 rounded-[4px] transition-all duration-300 group-hover:bg-amber group-hover:text-ink">
-                  {service.icon}
-                </div>
-                <h3 className="font-narrow font-bold text-[24px] uppercase mb-3 text-ink transition-colors duration-300 group-hover:text-paper leading-[1.05]">
-                  {service.name}
-                </h3>
-                <p className="text-[15px] text-ink-3 mb-6 leading-[1.55] transition-colors duration-300 group-hover:text-paper/80">
-                  {service.desc}
-                </p>
-                <span className="font-narrow font-bold text-[12px] uppercase tracking-[0.08em] text-amber-deep inline-flex items-center gap-1.5 transition-colors duration-300 group-hover:text-amber">
-                  Learn More →
-                </span>
               </div>
             </motion.div>
           ))}

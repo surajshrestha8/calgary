@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title">
+  <title id="title">Returns processing desk with inspection checklist</title>
+  <rect width="640" height="400" fill="#f2f1eb"/>
+  <rect x="70" y="258" width="500" height="54" fill="#1a2426"/>
+  <rect x="104" y="112" width="152" height="122" fill="#f9f8f4" stroke="#1a2426" stroke-width="6"/>
+  <path d="M104 152h152M180 112v122" stroke="#1a2426" stroke-width="4" opacity=".25"/>
+  <rect x="346" y="72" width="170" height="218" rx="8" fill="#ffffff" stroke="#1a2426" stroke-width="6"/>
+  <path d="M382 122h88M382 162h88M382 202h88" stroke="#1a2426" stroke-width="5"/>
+  <path d="M358 120l10 10 20-24M358 160l10 10 20-24M358 200l10 10 20-24" fill="none" stroke="#ff6b35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M174 304c-38-20-54-64-32-100" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round"/>
+  <path d="M124 214l20-16 8 26" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M506 304c38-20 54-64 32-100" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round"/>
+  <path d="M556 214l-20-16-8 26" fill="none" stroke="#ff6b35" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

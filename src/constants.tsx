@@ -35,6 +35,8 @@ export interface Service {
   name: string;
   desc: string;
   icon: ReactNode;
+  image: string;
+  imageAlt: string;
 }
 
 export const SERVICES: Service[] = [
@@ -43,36 +45,48 @@ export const SERVICES: Service[] = [
     name: "Receiving & Inspection",
     desc: "We accept your shipments, count units, photograph damage, and confirm quantities — same-day notifications via email or portal.",
     icon: <Warehouse size={26} />,
+    image: "/services/receiving-inspection.svg",
+    imageAlt: "Warehouse receiving area with boxes ready for inspection",
   },
   {
     id: "SVC / 02",
     name: "Amazon FBA Prep",
     desc: "FNSKU labeling, polybagging, bubble wrap, suffocation warnings, expiration dates — fully compliant with Amazon's prep requirements.",
     icon: <Tag size={26} />,
+    image: "/services/fba-prep.svg",
+    imageAlt: "Amazon FBA prep station with label printer and packed units",
   },
   {
     id: "SVC / 03",
     name: "FBM Fulfillment",
     desc: "We pick, pack, and ship orders directly to your customers — discounted carrier rates with Canada Post, UPS, FedEx, and Purolator.",
     icon: <ShoppingBag size={26} />,
+    image: "/services/fbm-fulfillment.svg",
+    imageAlt: "Fulfillment packing station with outbound parcels",
   },
   {
     id: "SVC / 04",
     name: "Bundling & Kitting",
     desc: "Multi-packs, gift sets, subscription boxes — we assemble custom bundles and kits ready for retail or marketplace listings.",
     icon: <Package size={26} />,
+    image: "/services/bundling-kitting.svg",
+    imageAlt: "Kitting table with grouped products and bundle packaging",
   },
   {
     id: "SVC / 05",
     name: "Inventory Storage",
     desc: "Climate-controlled, secure pallet and shelf storage in our Calgary facility. Pay only for the space you use, by the month.",
     icon: <ClipboardList size={26} />,
+    image: "/services/inventory-storage.svg",
+    imageAlt: "Organized pallet storage and inventory shelves",
   },
   {
     id: "SVC / 06",
     name: "Returns Processing",
     desc: "Inspect customer returns, restock sellable units, and dispose of or return damaged goods — keep your account healthy.",
     icon: <RotateCcw size={26} />,
+    image: "/services/returns-processing.svg",
+    imageAlt: "Returns processing desk with inspection checklist",
   },
 ];
 

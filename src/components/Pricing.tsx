@@ -68,7 +68,14 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className={`btn w-full justify-center ${plan.featured ? 'bg-amber text-ink hover:bg-paper' : 'btn-outline'}`}>
+              <a
+                href="#contact"
+                className={`w-full justify-center ${
+                  plan.featured
+                    ? 'bg-amber py-3 px-8 rounded-full font-narrow font-bold text-[14px] uppercase tracking-[0.05em] text-ink transition-all duration-300 hover:bg-paper hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber/20 inline-flex items-center gap-2'
+                    : 'btn-outline'
+                }`}
+              >
                 Get Started
               </a>
             </motion.div>
