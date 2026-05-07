@@ -24,7 +24,7 @@ export function FAQ() {
               Questions,<br /><span className="text-amber-deep italic">answered.</span>
             </h2>
             <p className="text-[17px] text-ink-3 max-w-[620px] leading-[1.6]">
-              Don't see what you're looking for? Drop us a message — we usually reply same day.
+              Don&apos;t see what you&apos;re looking for? Drop us a message — we usually reply same day.
             </p>
           </motion.div>
  

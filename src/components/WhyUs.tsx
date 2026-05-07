@@ -53,7 +53,7 @@ export function WhyUs() {
               Reliable. Fast.<br /><span className="text-amber-deep italic">Reasonable.</span>
             </h2>
             <p className="text-[17px] text-ink-3 max-w-[620px] leading-[1.6] mb-10">
-              You're not just outsourcing labor. You're trusting us with margin, reviews, and your seller account.
+              You&apos;re not just outsourcing labor. You&apos;re trusting us with margin, reviews, and your seller account.
             </p>
 
             <div className="flex flex-col gap-1">

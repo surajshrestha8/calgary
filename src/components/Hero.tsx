@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'motion/react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   const containerVariants: Variants = {

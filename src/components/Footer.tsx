@@ -17,7 +17,7 @@ export function Footer() {
               </div>
             </a>
             <p className="text-paper/60 text-[14px] mt-4.5 leading-[1.6] max-w-[320px]">
-              Calgary's trusted 3PL partner for Amazon sellers and e-commerce brands. Receiving, prep, storage, and fulfillment under one roof.
+              Calgary&apos;s trusted 3PL partner for Amazon sellers and e-commerce brands. Receiving, prep, storage, and fulfillment under one roof.
             </p>
           </div>
 

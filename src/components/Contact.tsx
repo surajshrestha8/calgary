@@ -56,10 +56,10 @@ export function Contact() {
               Get In Touch
             </span>
             <h2 className="font-narrow font-bold text-[clamp(36px,5vw,60px)] leading-[1] tracking-[-0.01em] uppercase mb-5">
-              Let's prep<br />your <span className="text-amber italic">next shipment.</span>
+              Let&apos;s prep<br />your <span className="text-amber italic">next shipment.</span>
             </h2>
             <p className="text-[17px] text-paper/70 max-w-[620px] leading-[1.6] mb-10">
-              Tell us about your product and volume. We'll send a tailored quote within one business day — usually a lot faster.
+              Tell us about your product and volume. We&apos;ll send a tailored quote within one business day — usually a lot faster.
             </p>
 
             <div className="flex flex-col gap-4.5 mt-10">
@@ -96,7 +96,7 @@ export function Contact() {
           >
             <div className="font-narrow font-bold text-[26px] uppercase mb-2">Request a Quote</div>
             <div className="text-[14px] text-paper/60 mb-7 font-mono tracking-[0.04em]">
-              // REPLY WITHIN 1 BUSINESS DAY
+              {'// REPLY WITHIN 1 BUSINESS DAY'}
             </div>
 
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>

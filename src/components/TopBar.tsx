@@ -1,6 +1,3 @@
-'use client';
-
-import { motion } from 'motion/react';
 import { Phone, Mail } from 'lucide-react';
 
 export function TopBar() {
