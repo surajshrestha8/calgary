@@ -100,6 +100,14 @@ export function Contact() {
             </div>
 
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="companyWebsite"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="grid sm:grid-cols-2 gap-4">
                 <FormGroup label="First Name" name="firstName" placeholder="Jane" required />
                 <FormGroup label="Last Name" name="lastName" placeholder="Doe" required />
