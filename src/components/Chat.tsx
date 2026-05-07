@@ -2,14 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, X, Send, Bot, User, Loader2 } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
-
-// Initialization - will fail gracefully if key is missing
-let ai: any = null;
-if (process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
-  ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY });
-}
+import { MessageSquare, X, Send, Bot, Loader2 } from 'lucide-react';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -35,50 +28,32 @@ export function Chat() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
-      setMessages(prev => [...prev, 
-        { role: 'user', content: input },
-        { role: 'assistant', content: 'Sorry, the chat assistant is currently in demo mode and requires an API key to function. Please contact hello@calgaryprep.ca for real support!' }
-      ]);
-      setInput('');
-      return;
-    }
-
     const userMessage = input.trim();
-    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    const nextMessages: Message[] = [...messages, { role: 'user', content: userMessage }];
+    setMessages(nextMessages);
     setInput('');
     setIsLoading(true);
 
     try {
-      const chat = ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: [
-          ...messages.map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
-          { role: 'user', parts: [{ text: userMessage }] }
-        ],
-        config: {
-          systemInstruction: `You are the Calgary Prep Center AI Assistant. 
-          Your goal is to help e-commerce sellers with their prep and 3PL needs in Calgary, AB. 
-          You are professional, efficient, and helpful. 
-          
-          Key Info:
-          - Location: Calgary, AB. 
-          - Services: Amazon FBA Prep, FBM Fulfillment, FNSKU Labeling, Storage, Bundling.
-          - Pricing: $0.65/unit (Starter), $1.25/unit (FBA Pro), $22/pallet (Storage).
-          - Turnaround: 24-hour guarantee.
-          - Contact: hello@calgaryprep.ca or (403) 555-0199.
-          - Opening Hours: Mon-Sat, 9AM-6PM MT.
-
-          Be concise. If you don't know an answer, direct them to contact sales.`,
-        }
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ messages: nextMessages }),
       });
 
-      const response = await chat;
-      const assistantMessage = response.text || "I'm sorry, I couldn't process that. Please try again.";
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Chat request failed');
+      }
+
+      const assistantMessage = data.message || "I'm sorry, I couldn't process that. Please try again.";
       setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage }]);
     } catch (error) {
       console.error("Chat Error:", error);
-      setMessages(prev => [...prev, { role: 'assistant', content: "I'm having trouble connecting right now. Feel free to email us at hello@calgaryprep.ca!" }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: error instanceof Error ? error.message : "I'm having trouble connecting right now. Feel free to email us at hello@calgaryprep.ca!" }]);
     } finally {
       setIsLoading(false);
     }

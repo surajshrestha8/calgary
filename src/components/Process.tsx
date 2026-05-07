@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { PROCESS_STEPS } from '../constants';
 

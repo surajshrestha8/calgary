@@ -1,5 +1,9 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { PRICING_PLANS } from '../constants';
+
+type PricingPlan = (typeof PRICING_PLANS)[number];
 
 export function Pricing() {
   return (
@@ -29,7 +33,7 @@ export function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-15">
-          {PRICING_PLANS.map((plan: any, i) => (
+          {PRICING_PLANS.map((plan: PricingPlan, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -57,7 +61,7 @@ export function Pricing() {
                 {plan.period}
               </div>
               <ul className="list-none mb-8">
-                {plan.features.map((feat: any, j: number) => (
+                {plan.features.map((feat: string, j: number) => (
                   <li key={j} className={`py-2.5 pl-6 border-b border-ink/10 relative text-[14px] last:border-none ${plan.featured ? 'text-paper/85' : ''}`}>
                     <span className={`absolute left-0 top-4.5 w-3 h-[2px] ${plan.featured ? 'bg-amber' : 'bg-amber-deep'}`}></span>
                     {feat}

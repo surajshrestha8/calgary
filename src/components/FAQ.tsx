@@ -1,7 +1,11 @@
+'use client';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus } from 'lucide-react';
 import { FAQS } from '../constants';
+
+type FAQEntry = (typeof FAQS)[number];
 
 export function FAQ() {
   return (
@@ -35,7 +39,7 @@ export function FAQ() {
   );
 }
  
-function FAQItem({ faq, isFirst }: any) {
+function FAQItem({ faq, isFirst }: { faq: FAQEntry; isFirst: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

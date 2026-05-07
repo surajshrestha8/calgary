@@ -1,8 +1,10 @@
-import { motion } from 'motion/react';
+'use client';
+
+import { motion, type Variants } from 'motion/react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function Hero() {
-  const containerVariants: any = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
@@ -89,7 +91,7 @@ export function Hero() {
             {/* Floating Card Qty */}
             <motion.div 
                animate={{ y: [0, -10, 0] }}
-               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" } as any}
+               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                className="absolute -bottom-7.5 -left-7.5 w-[200px] bg-paper text-ink border-[1.5px] border-ink p-4.5 sm:p-5 rounded-[4px] -rotate-3 shadow-lg z-20"
             >
               <div className="font-narrow font-bold text-[30px] leading-none">3,420</div>
