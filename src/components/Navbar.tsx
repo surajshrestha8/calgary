@@ -44,8 +44,12 @@ export function Navbar() {
           </a>
           
           <button 
-            className="lg:hidden flex flex-col gap-[5px] p-1.5 cursor-pointer"
+            type="button"
+            className="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer rounded-[4px]"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             <span className={`block w-6 h-[2px] bg-ink transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
             <span className={`block w-6 h-[2px] bg-ink transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
@@ -63,7 +67,7 @@ export function Navbar() {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden absolute top-full left-0 right-0 z-20 bg-paper border-b border-ink/10 overflow-hidden shadow-lg"
           >
-            <ul className="flex flex-col gap-4.5 p-6 font-medium">
+            <ul id="mobile-navigation" className="flex flex-col gap-4.5 p-6 font-medium">
               {NAV_LINKS.map((link) => (
                 <li key={link.name}>
                   <a 

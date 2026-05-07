@@ -18,8 +18,12 @@
     @apply bg-paper text-ink font-sans antialiased selection:bg-amber/30;
   }
 
+  a, button, input, select, textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+  }
+
   .container {
-    @apply max-w-7xl mx-auto px-6 lg:px-12;
+    @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-12;
   }
 
   /* Custom utility for outlined buttons */
@@ -29,6 +33,11 @@
 
   .btn-primary, .btn-amber {
     @apply bg-amber py-3 px-8 rounded-full font-narrow font-bold text-[14px] uppercase tracking-[0.05em] text-paper transition-all duration-300 hover:bg-amber-deep hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-amber/20 inline-flex items-center gap-2;
+  }
+
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
   }
 }
 

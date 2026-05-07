@@ -14,9 +14,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden">
+    <section className="relative pt-14 pb-18 sm:pt-20 sm:pb-24 overflow-hidden">
       <div className="container">
-        <div className="grid md:grid-cols-[1.15fr_1fr] items-center gap-15">
+        <div className="grid md:grid-cols-[1.15fr_1fr] items-center gap-12 md:gap-15">
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -35,23 +35,30 @@ export function Hero() {
             <p className="text-[19px] leading-[1.55] text-ink-3 max-w-[540px] mb-9.5">
               We receive, inspect, label, bundle, and ship your inventory to Amazon FBA, FBM customers, and any e-commerce channel — so you can focus on growing the brand, not babysitting boxes.
             </p>
-            <div className="flex flex-wrap gap-3.5 mb-12">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3.5 mb-10 sm:mb-12">
               <a href="#contact" className="btn btn-amber group">Request a Quote <ArrowRight size={14} className="transition-transform group-hover:translate-x-[3px]" /></a>
               <a href="#services" className="btn btn-outline">View Services</a>
             </div>
-            <div className="grid grid-cols-3 gap-9 pt-9 border-top border-ink/10">
+            <div className="grid grid-cols-3 gap-4 sm:gap-9 pt-8 sm:pt-9 border-t border-ink/10">
               <div>
-                <div className="font-narrow font-bold text-[38px] leading-none text-ink">24h</div>
+                <div className="font-narrow font-bold text-[30px] sm:text-[38px] leading-none text-ink">24h</div>
                 <div className="font-mono text-[11px] tracking-[0.08em] text-ink-3 uppercase mt-1.5">Avg. Turnaround</div>
               </div>
               <div>
-                <div className="font-narrow font-bold text-[38px] leading-none text-ink">$0.65</div>
+                <div className="font-narrow font-bold text-[30px] sm:text-[38px] leading-none text-ink">$0.65</div>
                 <div className="font-mono text-[11px] tracking-[0.08em] text-ink-3 uppercase mt-1.5">Per Unit Prep*</div>
               </div>
               <div>
-                <div className="font-narrow font-bold text-[38px] leading-none text-ink">100%</div>
+                <div className="font-narrow font-bold text-[30px] sm:text-[38px] leading-none text-ink">100%</div>
                 <div className="font-mono text-[11px] tracking-[0.08em] text-ink-3 uppercase mt-1.5">Compliance Rate</div>
               </div>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3">
+              {["Calgary based", "Amazon-compliant prep", "Western Canada shipping"].map((item) => (
+                <span key={item} className="border border-ink/10 bg-white/50 px-3 py-1.5 rounded-full">
+                  {item}
+                </span>
+              ))}
             </div>
           </motion.div>
 

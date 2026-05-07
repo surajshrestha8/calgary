@@ -2,7 +2,7 @@
 
 import { ReactNode, useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -41,12 +41,12 @@ export function Contact() {
   };
 
   return (
-    <section className="bg-ink text-paper py-25 relative overflow-hidden" id="contact">
+    <section className="bg-ink text-paper py-18 sm:py-25 relative overflow-hidden" id="contact">
       {/* Decorative gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_100%,rgba(255,106,19,0.12),transparent_40%),radial-gradient(circle_at_100%_0%,rgba(255,106,19,0.08),transparent_40%)] pointer-events-none"></div>
 
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-20 relative">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 relative">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export function Contact() {
               Tell us about your product and volume. We&apos;ll send a tailored quote within one business day — usually a lot faster.
             </p>
 
-            <div className="flex flex-col gap-4.5 mt-10">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4.5 mt-10">
               <ContactRow 
                 icon={<MapPin size={18} />} 
                 label="Warehouse" 
@@ -92,11 +92,19 @@ export function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-paper/5 border border-paper/12 p-10 rounded-[4px] backdrop-blur-md"
+            className="bg-paper/5 border border-paper/12 p-6 sm:p-10 rounded-[4px] backdrop-blur-md"
           >
-            <div className="font-narrow font-bold text-[26px] uppercase mb-2">Request a Quote</div>
-            <div className="text-[14px] text-paper/60 mb-7 font-mono tracking-[0.04em]">
-              {'// REPLY WITHIN 1 BUSINESS DAY'}
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-7">
+              <div>
+                <div className="font-narrow font-bold text-[26px] uppercase mb-2">Request a Quote</div>
+                <div className="text-[14px] text-paper/60 font-mono tracking-[0.04em]">
+                  {'// REPLY WITHIN 1 BUSINESS DAY'}
+                </div>
+              </div>
+              <div className="inline-flex items-center gap-2 self-start rounded-[4px] border border-paper/12 bg-paper/5 px-3 py-2 text-[12px] text-paper/75">
+                <ShieldCheck size={15} className="text-amber" />
+                Private intake
+              </div>
             </div>
 
             <form className="flex flex-col gap-4.5" onSubmit={handleSubmit}>
@@ -116,8 +124,8 @@ export function Contact() {
               <FormGroup label="Phone (Optional)" name="phone" placeholder="(___) ___-____" />
               
               <div className="flex flex-col gap-2">
-                <label className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">What do you need?</label>
-                <select name="service" required className="bg-transparent border-b border-paper/20 py-2.5 text-[15px] focus:outline-none focus:border-amber cursor-pointer">
+                <label htmlFor="service" className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">What do you need?</label>
+                <select id="service" name="service" required className="bg-transparent border-b border-paper/20 py-2.5 text-[16px] sm:text-[15px] focus:border-amber cursor-pointer">
                   <option className="bg-ink">Amazon FBA Prep</option>
                   <option className="bg-ink">FBM Fulfillment</option>
                   <option className="bg-ink">Storage Only</option>
@@ -128,8 +136,8 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">Estimated Monthly Units</label>
-                <select name="monthlyUnits" required className="bg-transparent border-b border-paper/20 py-2.5 text-[15px] focus:outline-none focus:border-amber cursor-pointer">
+                <label htmlFor="monthlyUnits" className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">Estimated Monthly Units</label>
+                <select id="monthlyUnits" name="monthlyUnits" required className="bg-transparent border-b border-paper/20 py-2.5 text-[16px] sm:text-[15px] focus:border-amber cursor-pointer">
                   <option className="bg-ink">Less than 500</option>
                   <option className="bg-ink">500 – 2,000</option>
                   <option className="bg-ink">2,000 – 10,000</option>
@@ -138,21 +146,22 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">Tell us about your product</label>
+                <label htmlFor="message" className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">Tell us about your product</label>
                 <textarea 
+                  id="message"
                   name="message"
                   required
-                  className="bg-transparent border-b border-paper/20 py-2.5 text-[15px] focus:outline-none focus:border-amber resize-y min-h-[80px]"
+                  className="bg-transparent border-b border-paper/20 py-2.5 text-[16px] sm:text-[15px] focus:border-amber resize-y min-h-[80px]"
                   placeholder="Product type, dimensions, special handling needs..."
                 ></textarea>
               </div>
 
               {statusMessage && (
                 <div
-                  className={`text-[13px] leading-[1.5] ${
-                    status === 'success' ? 'text-amber' : 'text-paper/80'
+                  className={`rounded-[4px] border px-3 py-2 text-[13px] leading-[1.5] ${
+                    status === 'success' ? 'border-amber/40 bg-amber/10 text-amber' : 'border-paper/15 bg-paper/5 text-paper/85'
                   }`}
-                  role="status"
+                  role={status === 'error' ? 'alert' : 'status'}
                 >
                   {statusMessage}
                 </div>
@@ -161,6 +170,9 @@ export function Contact() {
               <button type="submit" disabled={status === 'sending'} className="btn btn-amber mt-3 w-full justify-center group uppercase tracking-[0.08em] font-bold disabled:cursor-not-allowed disabled:opacity-70">
                 {status === 'sending' ? 'Sending...' : 'Send Request'} <ArrowRight size={14} className="transition-transform group-hover:translate-x-[3px]" />
               </button>
+              <p className="text-center text-[12px] leading-[1.5] text-paper/50">
+                Your details are only used to prepare your quote. No mailing list, no resale.
+              </p>
             </form>
           </motion.div>
         </div>
@@ -190,13 +202,14 @@ function ContactRow({ icon, label, value, href }: { icon: ReactNode, label: stri
 function FormGroup({ label, name, type = "text", placeholder, required = false }: { label: string, name: string, type?: string, placeholder: string, required?: boolean }) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">{label}</label>
+      <label htmlFor={name} className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">{label}</label>
       <input 
+        id={name}
         name={name}
         type={type} 
         placeholder={placeholder}
         required={required}
-        className="bg-transparent border-b border-paper/20 py-2.5 text-[15px] focus:outline-none focus:border-amber transition-colors"
+        className="bg-transparent border-b border-paper/20 py-2.5 text-[16px] sm:text-[15px] focus:border-amber transition-colors"
       />
     </div>
   );

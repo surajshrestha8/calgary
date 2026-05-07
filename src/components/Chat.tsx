@@ -24,6 +24,17 @@ export function Chat() {
     }
   }, [messages]);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -68,7 +79,10 @@ export function Chat() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-[1000] w-14 h-14 bg-amber text-paper rounded-full shadow-2xl flex items-center justify-center cursor-pointer group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[1000] w-14 h-14 bg-amber text-paper rounded-full shadow-2xl flex items-center justify-center cursor-pointer group"
+        aria-label={isOpen ? 'Close chat assistant' : 'Open chat assistant'}
+        aria-expanded={isOpen}
+        aria-controls="chat-assistant"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -93,7 +107,10 @@ export function Chat() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-[1000] w-[360px] max-w-[calc(100vw-48px)] h-[500px] bg-paper border border-ink/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            id="chat-assistant"
+            role="dialog"
+            aria-label="Calgary Prep chat assistant"
+            className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-[1000] w-[360px] max-w-[calc(100vw-32px)] h-[min(500px,calc(100vh-112px))] bg-paper border border-ink/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-ink text-paper p-4 flex items-center gap-3">
@@ -144,6 +161,7 @@ export function Chat() {
             <form onSubmit={handleSubmit} className="p-4 border-t border-ink/10 bg-paper-2/50">
               <div className="relative">
                 <input
+                  aria-label="Chat message"
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
@@ -156,6 +174,7 @@ export function Chat() {
                   className={`absolute right-2 top-2 p-1.5 rounded-lg transition-colors ${
                     input.trim() && !isLoading ? 'bg-amber text-paper' : 'bg-ink/5 text-ink/30'
                   }`}
+                  aria-label="Send chat message"
                 >
                   <Send size={18} />
                 </button>
