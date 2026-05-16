@@ -14,7 +14,7 @@ export function Navbar() {
       <div className="container flex justify-between items-center py-4.5">
         <a href="#" className="flex items-center shrink-0 py-0.5">
           <Image
-            src="/logo/logo.jfif"
+            src="/logo/logo.jpg"
             alt="Calgary Prep Center"
             width={260}
             height={44}
