@@ -142,14 +142,12 @@ export const WHY_US_POINTS = [
 ];
 
 export const PLATFORMS = [
-  { name: "Amazon CA", logo: "/platforms/amazon-ca.png" },
   { name: "Amazon US", logo: "/platforms/amazon.png" },
   { name: "Walmart", logo: "/platforms/wallmart.png" },
   { name: "Shopify", logo: "/platforms/shopify.png" },
   { name: "TikTok Shop", logo: "/platforms/tiktok-shop.png" },
   { name: "Etsy", logo: "/platforms/etsy.png" },
   { name: "eBay", logo: "/platforms/ebay.png" },
-  { name: "SPN", logo: "/platforms/amazon.png" },
 ];
 
 export const PRICING_PLANS = [
@@ -187,7 +185,7 @@ export const PRICING_PLANS = [
   {
     name: "Storage",
     desc: "Secure warehousing in our Calgary facility.",
-    price: "22",
+    price: "40",
     period: "PER PALLET / MONTH",
     features: [
       "Climate-controlled space",
