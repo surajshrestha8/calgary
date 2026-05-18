@@ -83,7 +83,7 @@ const localBusinessJsonLd = {
   description:
     "Amazon FBA prep, FBM fulfillment, FNSKU labeling, bundling, and inventory storage for e-commerce sellers in Calgary, Alberta.",
   telephone: "+1-825-561-7356",
-  email: "hello@calgaryprep.ca",
+  email: "expertscalgary@gmail.com",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",

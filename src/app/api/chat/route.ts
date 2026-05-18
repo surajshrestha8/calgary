@@ -15,7 +15,7 @@ Key Info:
 - Services: Amazon FBA Prep, FBM Fulfillment, FNSKU Labeling, Storage, Bundling.
 - Pricing: $0.65/unit (Starter), $1.25/unit (FBA Pro), $22/pallet (Storage).
 - Turnaround: 24-hour guarantee.
-- Contact: hello@calgaryprep.ca or (403) 555-0199.
+- Contact: expertscalgary@gmail.com or (403) 555-0199.
 - Opening Hours: Mon-Sat, 9AM-6PM MT.
 
 Be concise. If you don't know an answer, direct them to contact sales.`;
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Sorry, the chat assistant is currently in demo mode. Please contact hello@calgaryprep.ca for real support!",
+          "Sorry, the chat assistant is currently in demo mode. Please contact expertscalgary@gmail.com for real support!",
       },
       { status: 503 },
     );
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "I'm having trouble connecting right now. Feel free to email us at hello@calgaryprep.ca!",
+          "I'm having trouble connecting right now. Feel free to email us at expertscalgary@gmail.com!",
       },
       { status: 500 },
     );

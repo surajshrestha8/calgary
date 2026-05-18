@@ -64,7 +64,7 @@ export function Chat() {
       setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage }]);
     } catch (error) {
       console.error("Chat Error:", error);
-      setMessages(prev => [...prev, { role: 'assistant', content: error instanceof Error ? error.message : "I'm having trouble connecting right now. Feel free to email us at hello@calgaryprep.ca!" }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: error instanceof Error ? error.message : "I'm having trouble connecting right now. Feel free to email us at expertscalgary@gmail.com!" }]);
     } finally {
       setIsLoading(false);
     }

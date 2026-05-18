@@ -13,7 +13,7 @@ export function TopBar() {
         </div>
         <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-5.5">
           <span className="flex items-center gap-1.5 whitespace-nowrap"><Phone size={12} />+1 (825) 561-7356 </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} /> HELLO@CALGARYPREP.CA</span>
+          <span className="flex items-center gap-1.5 whitespace-nowrap"><Mail size={12} /> EXPERTSCALGARY@GMAIL.COM</span>
         </div>
       </div>
     </div>
