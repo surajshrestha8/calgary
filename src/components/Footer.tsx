@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Image from 'next/image';
-import { Instagram, Facebook, Linkedin, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container">
         <div className="grid sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 mb-12">
           <div className="footer-brand">
-            <a href="#" className="flex items-center gap-3 font-narrow font-extrabold text-[20px] uppercase tracking-[0.02em]">
+            <Link href="/" className="flex items-center gap-3 font-narrow font-extrabold text-[20px] uppercase tracking-[0.02em]">
               <div className="h-10 w-[118px] bg-paper rounded-[4px] overflow-hidden relative after:content-[''] after:absolute after:-top-[2px] after:-left-[2px] after:w-full after:h-full after:border after:border-amber after:rounded-[4px] after:pointer-events-none">
                 <Image
                   src="/logo/logo.jpg"
@@ -21,9 +21,9 @@ export function Footer() {
               </div>
               <div className="leading-tight">
                 Calgary Prep Center
-                <small className="block text-[9px] font-medium tracking-[0.18em] text-paper/50 mt-0.5 uppercase">3PL · FBA · FBM · STORAGE</small>
+                <small className="block text-[9px] font-medium tracking-[0.18em] text-paper/50 mt-0.5 uppercase">3PL / FBA / FBM / STORAGE</small>
               </div>
-            </a>
+            </Link>
             <p className="text-paper/60 text-[14px] mt-4.5 leading-[1.6] max-w-[320px]">
               Calgary&apos;s trusted 3PL partner for Amazon sellers and e-commerce brands. Receiving, prep, storage, and fulfillment under one roof.
             </p>
@@ -54,20 +54,13 @@ export function Footer() {
               <li><a href="tel:+1 (825) 561-7356" className="text-paper/70 text-[14px] hover:text-amber transition-colors">+1 (825) 561-7356</a></li>
               <li><a href="mailto:info@calgaryprepexperts.com" className="text-paper/70 text-[14px] hover:text-amber transition-colors">info@calgaryprepexperts.com</a></li>
               <li className="text-paper/70 text-[14px]">401 33 St NE #3, Calgary, AB T2A 1X5 </li>
-              <li className="text-paper/70 text-[14px]">Mon–Sat · 9–6 MST</li>
+              <li className="text-paper/70 text-[14px]">Mon-Sat / 9-6 MT</li>
             </ul>
           </FooterCol>
         </div>
 
         <div className="border-t border-paper/8 pt-6 flex flex-wrap justify-between items-center gap-4 font-mono text-[11px] text-paper/40 tracking-[0.04em]">
-          <div>© 2026 CALGARY PREP CENTER · ALL RIGHTS RESERVED</div>
-          <div className="flex gap-3">
-            {[Instagram, Facebook, MessageSquare, Linkedin].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 border border-paper/15 rounded-full flex items-center justify-center text-paper/60 hover:bg-amber hover:text-ink hover:border-amber transition-all">
-                <Icon size={16} />
-              </a>
-            ))}
-          </div>
+          <div>(c) 2026 CALGARY PREP CENTER / ALL RIGHTS RESERVED</div>
         </div>
       </div>
     </footer>

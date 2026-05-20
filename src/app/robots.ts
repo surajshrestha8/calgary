@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://calgaryprep.ca/sitemap.xml",
-    host: "https://calgaryprep.ca",
+    sitemap: "https://calgaryprepexperts.com/sitemap.xml",
+    host: "https://calgaryprepexperts.com",
   };
 }

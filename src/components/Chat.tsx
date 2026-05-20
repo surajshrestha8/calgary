@@ -181,7 +181,7 @@ export function Chat() {
               </div>
               <div className="mt-2 text-center">
                 <span className="font-mono text-[9px] text-ink-3 uppercase tracking-wider">
-                  AI-Powered · Real help anytime
+                  AI-Powered / Real help anytime
                 </span>
               </div>
             </form>

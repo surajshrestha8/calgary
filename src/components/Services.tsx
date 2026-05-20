@@ -27,7 +27,7 @@ export function Services() {
             viewport={{ once: true }}
             className="text-[17px] text-ink-3 max-w-[620px] leading-[1.6]"
           >
-            From the moment your shipment arrives at our Calgary warehouse to the second it lands in an Amazon fulfillment center — we handle every step.
+            From the moment your shipment arrives at our Calgary warehouse to the second it lands in an Amazon fulfillment center - we handle every step.
           </motion.p>
         </div>
 
@@ -65,7 +65,7 @@ export function Services() {
                     {service.desc}
                   </p>
                   <span className="font-narrow font-bold text-[12px] uppercase tracking-[0.08em] text-amber inline-flex items-center gap-1.5 transition-colors duration-300 group-hover:text-amber">
-                    Learn More →
+                    Learn More -&gt;
                   </span>
                 </div>
               </div>

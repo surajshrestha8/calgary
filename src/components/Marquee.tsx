@@ -1,7 +1,7 @@
 import { MARQUEE_ITEMS } from '../constants';
 
 const itemClassName =
-  "font-narrow font-bold text-[22px] uppercase tracking-[0.04em] flex items-center gap-15 shrink-0 after:content-['✦'] after:text-amber after:text-[14px]";
+  "font-narrow font-bold text-[22px] uppercase tracking-[0.04em] flex items-center gap-15 shrink-0 after:content-['*'] after:text-amber after:text-[14px]";
 
 export function Marquee() {
   return (

@@ -43,7 +43,7 @@ export const SERVICES: Service[] = [
   {
     id: "SVC / 01",
     name: "Receiving & Inspection",
-    desc: "We accept your shipments, count units, photograph damage, and confirm quantities — same-day notifications via email or portal.",
+    desc: "We accept your shipments, count units, photograph damage, and confirm quantities - same-day notifications via email or portal.",
     icon: <Warehouse size={26} />,
     image: "/services/receiving-inspection.jpg",
     imageAlt: "Warehouse receiving area with boxes ready for inspection",
@@ -51,7 +51,7 @@ export const SERVICES: Service[] = [
   {
     id: "SVC / 02",
     name: "Amazon FBA Prep",
-    desc: "FNSKU labeling, polybagging, bubble wrap, suffocation warnings, expiration dates — fully compliant with Amazon's prep requirements.",
+    desc: "FNSKU labeling, polybagging, bubble wrap, suffocation warnings, expiration dates - fully compliant with Amazon's prep requirements.",
     icon: <Tag size={26} />,
     image: "/services/fba-prep.svg",
     imageAlt: "Amazon FBA prep station with label printer and packed units",
@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
   {
     id: "SVC / 03",
     name: "FBM Fulfillment",
-    desc: "We pick, pack, and ship orders directly to your customers — discounted carrier rates with Canada Post, UPS, FedEx, and Purolator.",
+    desc: "We pick, pack, and ship orders directly to your customers - discounted carrier rates with Canada Post, UPS, FedEx, and Purolator.",
     icon: <ShoppingBag size={26} />,
     image: "/services/fbm-fulfillment.svg",
     imageAlt: "Fulfillment packing station with outbound parcels",
@@ -67,7 +67,7 @@ export const SERVICES: Service[] = [
   {
     id: "SVC / 04",
     name: "Bundling & Kitting",
-    desc: "Multi-packs, gift sets, subscription boxes — we assemble custom bundles and kits ready for retail or marketplace listings.",
+    desc: "Multi-packs, gift sets, subscription boxes - we assemble custom bundles and kits ready for retail or marketplace listings.",
     icon: <Package size={26} />,
     image: "/services/bundling-kitting.jpeg",
     imageAlt: "Kitting table with grouped products and bundle packaging",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
   {
     id: "SVC / 06",
     name: "Returns Processing",
-    desc: "Inspect customer returns, restock sellable units, and dispose of or return damaged goods — keep your account healthy.",
+    desc: "Inspect customer returns, restock sellable units, and dispose of or return damaged goods - keep your account healthy.",
     icon: <RotateCcw size={26} />,
     image: "/services/returns-processing.jpg",
     imageAlt: "Returns processing desk with inspection checklist",
@@ -104,7 +104,7 @@ export const PROCESS_STEPS = [
   {
     num: "03",
     title: "We Prep It",
-    desc: "Receive, inspect, label, and pack to Amazon's spec — or your custom FBM packaging.",
+    desc: "Receive, inspect, label, and pack to Amazon's spec - or your custom FBM packaging.",
   },
   {
     num: "04",
@@ -117,12 +117,12 @@ export const WHY_US_POINTS = [
   {
     num: "01",
     title: "Strategic Calgary Location",
-    desc: "Direct access to Western Canada and a short hop to Amazon's Alberta and BC fulfillment centers — lower freight, faster intake.",
+    desc: "Direct access to Western Canada and a short hop to Amazon's Alberta and BC fulfillment centers - lower freight, faster intake.",
   },
   {
     num: "02",
     title: "Transparent Per-Unit Pricing",
-    desc: "No surprise fees. No long-term contracts. You pay for exactly what we touch — published rates, monthly invoicing.",
+    desc: "No surprise fees. No long-term contracts. You pay for exactly what we touch - published rates, monthly invoicing.",
   },
   {
     num: "03",
@@ -132,12 +132,12 @@ export const WHY_US_POINTS = [
   {
     num: "04",
     title: "FBA Compliance Guaranteed",
-    desc: "Trained team that knows Amazon's prep requirements cold — from FNSKU placement to expiration formatting and suffocation warnings.",
+    desc: "Trained team that knows Amazon's prep requirements cold - from FNSKU placement to expiration formatting and suffocation warnings.",
   },
   {
     num: "05",
     title: "Real Humans, Real Updates",
-    desc: "Direct messaging with your account manager via email, WhatsApp, or our portal — no support ticket purgatory.",
+    desc: "Direct messaging with your account manager via email, WhatsApp, or our portal - no support ticket purgatory.",
   },
 ];
 
@@ -205,7 +205,7 @@ export const FAQS = [
   },
   {
     q: "Do you accept international shipments?",
-    a: "Yes. We regularly receive containers from China, India, and the us, as well as parcel shipments from anywhere. We can act as the consignee for customs purposes — ask us for our customs broker recommendations."
+    a: "Yes. We regularly receive containers from China, India, and the US, as well as parcel shipments from anywhere. We can act as the consignee for customs purposes - ask us for our customs broker recommendations."
   },
   {
     q: "What's your minimum volume?",
@@ -213,7 +213,7 @@ export const FAQS = [
   },
   {
     q: "Can you handle hazmat or oversize items?",
-    a: "We handle most non-regulated oversized items. Hazmat (lithium batteries, aerosols, flammables) is reviewed case-by-case — please tell us what you're shipping when you request a quote so we can confirm."
+    a: "We handle most non-regulated oversized items. Hazmat (lithium batteries, aerosols, flammables) is reviewed case-by-case - please tell us what you're shipping when you request a quote so we can confirm."
   },
   {
     q: "How do I track my inventory?",

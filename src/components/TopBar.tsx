@@ -7,9 +7,9 @@ export function TopBar() {
         <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-5.5">
           <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
             <span className="w-1.5 h-1.5 rounded-full bg-amber shadow-[0_0_8px_var(--color-amber)] animate-pulse-custom"></span>
-            NOW SHIPPING — CALGARY, AB
+            NOW SHIPPING - CALGARY, AB
           </span>
-          <span className="whitespace-nowrap">OPEN MON–SAT · 9 AM – 6 PM MT</span>
+          <span className="whitespace-nowrap">OPEN MON-SAT / 9 AM - 6 PM MT</span>
         </div>
         <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-5.5">
           <span className="flex items-center gap-1.5 whitespace-nowrap"><Phone size={12} />+1 (825) 561-7356 </span>

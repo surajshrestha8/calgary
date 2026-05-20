@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 
@@ -12,7 +13,7 @@ export function Navbar() {
   return (
     <nav className="relative z-10 border-b border-ink/10 backdrop-blur-md bg-paper/92">
       <div className="container flex justify-between items-center py-4.5">
-        <a href="#" className="flex items-center shrink-0 py-0.5">
+        <Link href="/" className="flex items-center shrink-0 py-0.5">
           <Image
             src="/logo/logo.jpg"
             alt="Calgary Prep Center"
@@ -21,7 +22,7 @@ export function Navbar() {
             priority
             className="h-9 w-auto max-h-11 sm:h-10 md:h-11 max-w-[min(100%,260px)] object-contain object-left"
           />
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex gap-8 list-none text-[14px] font-medium">

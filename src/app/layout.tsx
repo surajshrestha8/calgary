@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Calgary's trusted 3PL prep center. Amazon FBA prep, FBM fulfillment, FNSKU labeling, bundling, and inventory storage for e-commerce sellers.",
-  metadataBase: new URL("https://calgaryprep.ca"),
+  metadataBase: new URL("https://calgaryprepexperts.com"),
   keywords: [
     "Calgary prep center",
     "Amazon FBA prep Calgary",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Calgary Prep Center - Amazon FBA Prep, FBM & 3PL Storage",
     description:
       "Calgary's trusted 3PL prep center. Amazon FBA prep, FBM fulfillment, FNSKU labeling, bundling, and inventory storage for e-commerce sellers.",
-    url: "https://calgaryprep.ca",
+    url: "https://calgaryprepexperts.com",
     siteName: "Calgary Prep Center",
     images: [
       {
@@ -76,10 +76,10 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://calgaryprep.ca/#business",
+  "@id": "https://calgaryprepexperts.com/#business",
   name: "Calgary Prep Center",
-  url: "https://calgaryprep.ca",
-  image: "https://calgaryprep.ca/opengraph-image",
+  url: "https://calgaryprepexperts.com",
+  image: "https://calgaryprepexperts.com/opengraph-image",
   description:
     "Amazon FBA prep, FBM fulfillment, FNSKU labeling, bundling, and inventory storage for e-commerce sellers in Calgary, Alberta.",
   telephone: "+1-825-561-7356",

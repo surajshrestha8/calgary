@@ -56,7 +56,7 @@ export function Process() {
               </p>
               {index < PROCESS_STEPS.length - 1 && (
                 <div className="hidden lg:block absolute -right-4 top-[-15px] text-amber text-[20px]">
-                  →
+                  -&gt;
                 </div>
               )}
             </motion.div>

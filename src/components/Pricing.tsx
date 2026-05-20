@@ -28,7 +28,7 @@ export function Pricing() {
             viewport={{ once: true }}
             className="text-[17px] text-ink-3 max-w-[620px] leading-[1.6]"
           >
-            Pay per unit, per pallet, per service. No setup fees. No minimums. Volume discounts available — let&apos;s chat.
+            Pay per unit, per pallet, per service. No setup fees. No minimums. Volume discounts available - let&apos;s chat.
           </motion.p>
         </div>
 
@@ -83,7 +83,7 @@ export function Pricing() {
         </div>
 
         <p className="text-center mt-8 font-mono text-[14px] text-ink-3 tracking-[0.04em]">
-          {'// FBM, BUNDLING, KITTING & RETURNS PRICED PER PROJECT — REQUEST A QUOTE'}
+          {'// FBM, BUNDLING, KITTING & RETURNS PRICED PER PROJECT - REQUEST A QUOTE'}
         </p>
       </div>
     </section>

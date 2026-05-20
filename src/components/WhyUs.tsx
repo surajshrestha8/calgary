@@ -21,7 +21,7 @@ export function WhyUs() {
 
             <div className="relative">
               <div className="font-mono text-[11px] tracking-[0.1em] text-paper/50 mb-6 flex justify-between">
-                <span>FACILITY · YYC-01</span>
+                <span>FACILITY / YYC-01</span>
                 <span className="text-amber flex items-center gap-1.5 before:w-2 before:h-2 before:bg-amber before:rounded-full before:animate-pulse">LIVE</span>
               </div>
               <h3 className="font-narrow font-bold text-[clamp(38px,4.5vw,58px)] leading-[0.95] uppercase">
@@ -34,9 +34,9 @@ export function WhyUs() {
                 Calgary<br />Prep<br />Center
               </div>
               <div className="font-mono text-[10px] text-paper/50 text-right tracking-[0.05em]">
-                51.0447° N<br />
-                114.0719° W<br />
-                ALBERTA · CA
+                51.0447 N<br />
+                114.0719 W<br />
+                ALBERTA / CA
               </div>
             </div>
           </motion.div>

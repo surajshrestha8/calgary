@@ -59,7 +59,7 @@ export function Contact() {
               Let&apos;s prep<br />your <span className="text-amber italic">next shipment.</span>
             </h2>
             <p className="text-[17px] text-paper/70 max-w-[620px] leading-[1.6] mb-10">
-              Tell us about your product and volume. We&apos;ll send a tailored quote within one business day — usually a lot faster.
+              Tell us about your product and volume. We&apos;ll send a tailored quote within one business day - usually a lot faster.
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4.5 mt-10">
@@ -83,7 +83,7 @@ export function Contact() {
               <ContactRow 
                 icon={<Clock size={18} />} 
                 label="Hours" 
-                value="Mon–Sat · 9 AM – 6 PM MT" 
+                value="Mon-Sat / 9 AM - 6 PM MT" 
               />
             </div>
           </motion.div>
@@ -139,8 +139,8 @@ export function Contact() {
                 <label htmlFor="monthlyUnits" className="font-mono text-[11px] tracking-[0.1em] text-paper/60 uppercase">Estimated Monthly Units</label>
                 <select id="monthlyUnits" name="monthlyUnits" required className="bg-transparent border-b border-paper/20 py-2.5 text-[16px] sm:text-[15px] focus:border-amber cursor-pointer">
                   <option className="bg-ink">Less than 500</option>
-                  <option className="bg-ink">500 – 2,000</option>
-                  <option className="bg-ink">2,000 – 10,000</option>
+                  <option className="bg-ink">500 - 2,000</option>
+                  <option className="bg-ink">2,000 - 10,000</option>
                   <option className="bg-ink">10,000+</option>
                 </select>
               </div>

@@ -18,9 +18,9 @@ const barcodeBars = Array.from({ length: 25 }, (_, index) => ({
 
 const labelRows = [
   { label: 'SHIP FROM', val: 'CALGARY, AB', hl: false },
-  { label: 'SHIP TO', val: 'AMAZON FC Â· YYC1', hl: false },
+  { label: 'SHIP TO', val: 'AMAZON FC / YYC1', hl: false },
   { label: 'UNITS', val: '248', hl: false },
-  { label: 'STATUS', val: 'âœ“ INSPECTED', hl: true },
+  { label: 'STATUS', val: 'INSPECTED', hl: true },
   { label: 'FNSKU', val: 'X00ABC123Q', hl: false },
 ] as const;
 
@@ -56,7 +56,7 @@ export function Hero() {
             className="hero-text"
           >
             <span className="inline-flex items-center gap-2.5 font-mono text-[12px] tracking-[0.1em] text-ink-3 mb-7 px-3 py-1.5 border border-ink/10 rounded-full bg-white/50">
-              <span className="size-1.5 rounded-full bg-amber"></span> CALGARY Â· ALBERTA Â· CANADA
+              <span className="size-1.5 rounded-full bg-amber"></span> CALGARY / ALBERTA / CANADA
             </span>
             <h1 className="font-narrow font-bold text-[clamp(48px,7vw,92px)] leading-[0.95] tracking-[-0.02em] uppercase mb-8">
               Your <span className="text-amber-deep italic relative inline-block after:content-[''] after:absolute after:bottom-2 after:left-[-4px] after:right-[-4px] after:h-1.5 after:bg-amber/30 after:-z-1">Amazon</span><br />
@@ -64,7 +64,7 @@ export function Hero() {
               <span className="inline-block -rotate-2 bg-ink text-paper px-3 mx-1">in&nbsp;Calgary</span>
             </h1>
             <p className="text-[19px] leading-[1.55] text-ink-3 max-w-[540px] mb-9.5">
-              We receive, inspect, label, bundle, and ship your inventory to Amazon FBA, FBM customers, and any e-commerce channel â€” so you can focus on growing the brand, not babysitting boxes.
+              We receive, inspect, label, bundle, and ship your inventory to Amazon FBA, FBM customers, and any e-commerce channel - so you can focus on growing the brand, not babysitting boxes.
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3.5 mb-10 sm:mb-12">
               <a href="#contact" className="btn btn-amber group">Request a Quote <ArrowRight size={14} className="transition-transform group-hover:translate-x-[3px]" /></a>
@@ -112,7 +112,7 @@ export function Hero() {
                 >
                   {/* Main Label Card */}
                   <div className="absolute top-6 left-7 size-[70px] border-2 border-amber rounded-full flex items-center justify-center text-center text-amber font-narrow font-bold text-[9px] leading-[1.1] uppercase -rotate-12 tracking-[0.05em] z-10">
-                    FBA<br />READY<br />â˜…â˜…â˜…
+                    FBA<br />READY<br />***
                   </div>
                   <div className="absolute top-7 right-7 flex gap-[2px] items-end h-9">
                     {barcodeBars.map((bar) => (
@@ -180,7 +180,7 @@ export function Hero() {
 
             {/* Tape Tag */}
             <div className="absolute -top-5 -right-7.5 w-[240px] bg-amber text-ink py-4 px-5 rotate-4 rounded-[2px] shadow-lg z-20 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-3 before:bg-[linear-gradient(90deg,transparent_50%,rgba(0,0,0,0.6)_50%)] before:bg-[size:4px_100%] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-3 after:bg-[linear-gradient(90deg,transparent_50%,rgba(0,0,0,0.6)_50%)] after:bg-[size:4px_100%]">
-              <div className="font-narrow font-bold text-[11px] tracking-[0.18em] uppercase text-center">â˜… Handle With Care â˜…</div>
+              <div className="font-narrow font-bold text-[11px] tracking-[0.18em] uppercase text-center">*** Handle With Care ***</div>
             </div>
           </motion.div>
         </div>
