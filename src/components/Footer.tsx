@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import { Instagram, Facebook, Linkedin, MessageSquare } from 'lucide-react';
 
 export function Footer() {
@@ -8,8 +9,15 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 mb-12">
           <div className="footer-brand">
             <a href="#" className="flex items-center gap-3 font-narrow font-extrabold text-[20px] uppercase tracking-[0.02em]">
-              <div className="w-10 h-10 bg-ink text-amber flex items-center justify-center font-mono font-bold text-[14px] rounded-[4px] relative after:content-[''] after:absolute after:-top-[2px] after:-left-[2px] after:w-full after:h-full after:border after:border-amber after:rounded-[4px] after:pointer-events-none">
-                CP
+              <div className="h-10 w-[118px] bg-paper rounded-[4px] overflow-hidden relative after:content-[''] after:absolute after:-top-[2px] after:-left-[2px] after:w-full after:h-full after:border after:border-amber after:rounded-[4px] after:pointer-events-none">
+                <Image
+                  src="/logo/logo.jpg"
+                  alt=""
+                  width={118}
+                  height={40}
+                  className="h-full w-full object-contain"
+                  aria-hidden="true"
+                />
               </div>
               <div className="leading-tight">
                 Calgary Prep Center
@@ -46,7 +54,7 @@ export function Footer() {
               <li><a href="tel:+1 (825) 561-7356" className="text-paper/70 text-[14px] hover:text-amber transition-colors">+1 (825) 561-7356</a></li>
               <li><a href="mailto:info@calgaryprepexperts.com" className="text-paper/70 text-[14px] hover:text-amber transition-colors">info@calgaryprepexperts.com</a></li>
               <li className="text-paper/70 text-[14px]">401 33 St NE #3, Calgary, AB T2A 1X5 </li>
-              <li className="text-paper/70 text-[14px]">Mon–Sat · 9–6 MT</li>
+              <li className="text-paper/70 text-[14px]">Mon–Sat · 9–6 MST</li>
             </ul>
           </FooterCol>
         </div>
