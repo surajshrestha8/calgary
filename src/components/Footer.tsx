@@ -44,7 +44,7 @@ export function Footer() {
           <FooterCol title="Get In Touch">
             <ul className="flex flex-col gap-2.5">
               <li><a href="tel:+1 (825) 561-7356" className="text-paper/70 text-[14px] hover:text-amber transition-colors">+1 (825) 561-7356</a></li>
-              <li><a href="mailto:expertscalgary@gmail.com" className="text-paper/70 text-[14px] hover:text-amber transition-colors">expertscalgary@gmail.com</a></li>
+              <li><a href="mailto:info@calgaryprepexperts.com" className="text-paper/70 text-[14px] hover:text-amber transition-colors">info@calgaryprepexperts.com</a></li>
               <li className="text-paper/70 text-[14px]">401 33 St NE #3, Calgary, AB T2A 1X5 </li>
               <li className="text-paper/70 text-[14px]">Mon–Sat · 9–6 MT</li>
             </ul>

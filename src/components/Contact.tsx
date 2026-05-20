@@ -77,8 +77,8 @@ export function Contact() {
               <ContactRow 
                 icon={<Mail size={18} />} 
                 label="Email" 
-                value="expertscalgary@gmail.com" 
-                href="mailto:expertscalgary@gmail.com"
+                value="info@calgaryprepexperts.com" 
+                href="mailto:info@calgaryprepexperts.com"
               />
               <ContactRow 
                 icon={<Clock size={18} />} 

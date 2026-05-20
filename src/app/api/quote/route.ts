@@ -163,7 +163,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "We could not send your request right now. Please email expertscalgary@gmail.com.",
+            "We could not send your request right now. Please email info@calgaryprepexperts.com.",
         },
         { status: 500 },
       );
@@ -174,8 +174,8 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from:
         process.env.QUOTE_EMAIL_FROM ||
-        "Calgary Prep Quotes <expertscalgary@gmail.com>",
-      to: [process.env.QUOTE_EMAIL_TO || "expertscalgary@gmail.com"],
+        "Calgary Prep Quotes <info@calgaryprepexperts.com>",
+      to: [process.env.QUOTE_EMAIL_TO || "info@calgaryprepexperts.com"],
       replyTo: quote.email,
       subject: email.subject,
       text: email.text,
@@ -188,7 +188,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "We could not send your request right now. Please email expertscalgary@gmail.com.",
+            "We could not send your request right now. Please email info@calgaryprepexperts.com.",
         },
         { status: 500 },
       );
@@ -201,7 +201,7 @@ export async function POST(request: Request) {
     console.error("Quote API Error:", error);
 
     return NextResponse.json(
-      { error: "We could not send your request right now. Please email expertscalgary@gmail.com." },
+      { error: "We could not send your request right now. Please email info@calgaryprepexperts.com." },
       { status: 500 },
     );
   }
