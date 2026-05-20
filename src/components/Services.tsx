@@ -6,7 +6,7 @@ import { SERVICES } from '../constants';
 
 export function Services() {
   return (
-    <section className="bg-paper py-25" id="services">
+    <section className="bg-paper pt-14 pb-25 sm:pt-16" id="services">
       <div className="container">
         <div className="flex flex-wrap justify-between items-end gap-10 mb-15">
           <motion.div

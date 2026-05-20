@@ -15,8 +15,8 @@ import { Chat } from '@/components/Chat';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <TopBar />
       <div className="sticky top-0 z-[100]">
+        <TopBar />
         <Navbar />
         <Marquee />
       </div>

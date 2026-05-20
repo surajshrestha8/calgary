@@ -45,7 +45,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-14 pb-18 sm:pt-20 sm:pb-24 overflow-hidden">
+    <section className="relative pt-9 pb-14 sm:pt-9 sm:pb-18 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-[1.15fr_1fr] items-center gap-12 md:gap-15">
           <motion.div
