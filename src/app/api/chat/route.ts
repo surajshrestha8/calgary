@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Sorry, the chat assistant is currently in demo mode. Please contact info@calgaryprepexperts.com for real support!",
+          "Sorry for the inconvenience. Please contact info@calgaryprepexperts.com for real support!",
       },
       { status: 503 },
     );
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
       contents,
       config: {
         systemInstruction,
