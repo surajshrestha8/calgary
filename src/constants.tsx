@@ -22,6 +22,7 @@ export const SOCIAL_LINKS = [
     name: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61590557783317',
     ariaLabel: 'Visit Calgary Prep Center on Facebook',
+    opensInNewTab: true,
   },
   {
     name: 'WhatsApp',
@@ -33,6 +34,7 @@ export const SOCIAL_LINKS = [
     name: 'TikTok',
     href: '#',
     ariaLabel: 'Visit Calgary Prep Center on TikTok',
+    opensInNewTab: true,
   },
 ] as const;
 
