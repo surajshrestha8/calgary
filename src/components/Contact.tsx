@@ -2,11 +2,13 @@
 
 import { ReactNode, useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck, MessageCircle } from 'lucide-react';
+import { SOCIAL_LINKS } from '@/constants';
 
 export function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
+  const whatsappLink = SOCIAL_LINKS.find((link) => link.name === 'WhatsApp')?.href;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -74,6 +76,15 @@ export function Contact() {
                 value="+1 (825) 561-7356" 
                 href="tel:+1 (825) 561-7356"
               />
+              {whatsappLink && (
+                <ContactRow
+                  icon={<MessageCircle size={18} />}
+                  label="WhatsApp"
+                  value="Message us on WhatsApp"
+                  href={whatsappLink}
+                  external
+                />
+              )}
               <ContactRow 
                 icon={<Mail size={18} />} 
                 label="Email" 
@@ -181,16 +192,23 @@ export function Contact() {
   );
 }
 
-function ContactRow({ icon, label, value, href }: { icon: ReactNode, label: string, value: string, href?: string }) {
+function ContactRow({ icon, label, value, href, external = false }: { icon: ReactNode, label: string, value: string, href?: string, external?: boolean }) {
   return (
     <div className="flex items-center gap-4">
-      <div className="w-11 h-11 bg-paper/5 border border-paper/12 rounded-[4px] flex items-center justify-center text-amber shrink-0">
+      <div className="size-11 bg-paper/5 border border-paper/12 rounded-[4px] flex items-center justify-center text-amber shrink-0">
         {icon}
       </div>
       <div>
         <div className="font-mono text-[11px] text-paper/50 tracking-[0.08em] uppercase mb-0.5">{label}</div>
         {href ? (
-          <a href={href} className="text-paper font-medium hover:text-amber transition-colors">{value}</a>
+          <a
+            href={href}
+            className="text-paper font-medium hover:text-amber transition-colors"
+            target={external ? '_blank' : undefined}
+            rel={external ? 'noopener noreferrer' : undefined}
+          >
+            {value}
+          </a>
         ) : (
           <div className="text-paper font-medium">{value}</div>
         )}

@@ -17,6 +17,25 @@ export const NAV_LINKS = [
   { name: 'Contact', href: '#contact' },
 ];
 
+export const SOCIAL_LINKS = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61590557783317',
+    ariaLabel: 'Visit Calgary Prep Center on Facebook',
+  },
+  {
+    name: 'WhatsApp',
+    href: 'whatsapp://send?phone=18255617356&text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Calgary%20Prep%20Center.',
+    ariaLabel: 'Message Calgary Prep Center on WhatsApp',
+    opensInNewTab: false,
+  },
+  {
+    name: 'TikTok',
+    href: '#',
+    ariaLabel: 'Visit Calgary Prep Center on TikTok',
+  },
+] as const;
+
 export const MARQUEE_ITEMS = [
   "Amazon FBA Prep",
   "FBM Fulfillment",

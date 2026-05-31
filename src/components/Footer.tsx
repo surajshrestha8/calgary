@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { SocialLinks } from './SocialLinks';
 
 export function Footer() {
   return (
@@ -27,6 +28,7 @@ export function Footer() {
             <p className="text-paper/60 text-[14px] mt-4.5 leading-[1.6] max-w-[320px]">
               Calgary&apos;s trusted 3PL partner for Amazon sellers and e-commerce brands. Receiving, prep, storage, and fulfillment under one roof.
             </p>
+            <SocialLinks className="mt-5" />
           </div>
 
           <FooterCol title="Services">
@@ -61,6 +63,7 @@ export function Footer() {
 
         <div className="border-t border-paper/8 pt-6 flex flex-wrap justify-between items-center gap-4 font-mono text-[11px] text-paper/40 tracking-[0.04em]">
           <div>(c) 2026 CALGARY PREP CENTER / ALL RIGHTS RESERVED</div>
+          <div className="uppercase">Follow / Message / Watch</div>
         </div>
       </div>
     </footer>
