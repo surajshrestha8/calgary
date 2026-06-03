@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, X, Send, Bot, Loader2 } from 'lucide-react';
+import { SOCIAL_LINKS } from '@/constants';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -10,6 +11,7 @@ interface Message {
 }
 
 export function Chat() {
+  const whatsappLink = SOCIAL_LINKS.find((link) => link.name === 'WhatsApp');
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: 'Hi! I\'m your Calgary Prep assistant. How can I help you with your FBA prep or storage needs today?' }
@@ -72,6 +74,23 @@ export function Chat() {
 
   return (
     <>
+      {whatsappLink && (
+        <motion.a
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          href={whatsappLink.href}
+          aria-label={whatsappLink.ariaLabel}
+          className="fixed bottom-4 right-20 sm:bottom-6 sm:right-24 z-[1000] w-14 h-14 bg-[#25D366] text-paper rounded-full shadow-2xl flex items-center justify-center cursor-pointer group"
+        >
+          <WhatsAppIcon className="h-7 w-7" />
+          <span className="pointer-events-none absolute right-full mr-4 bg-ink text-paper text-[12px] font-mono py-1.5 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            WHATSAPP
+          </span>
+        </motion.a>
+      )}
+
       {/* Toggle Button */}
       <motion.button
         initial={{ scale: 0, opacity: 0 }}
@@ -95,7 +114,7 @@ export function Chat() {
             </motion.div>
           )}
         </AnimatePresence>
-        <span className="absolute right-full mr-4 bg-ink text-paper text-[12px] font-mono py-1.5 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className="pointer-events-none absolute right-full mr-4 bg-ink text-paper text-[12px] font-mono py-1.5 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
           CHAT WITH US
         </span>
       </motion.button>
@@ -189,5 +208,13 @@ export function Chat() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+      <path d="M12 3.2a8.7 8.7 0 0 0-7.5 13.1L3.4 20.8l4.6-1.1A8.7 8.7 0 1 0 12 3.2zm0 1.7a7 7 0 1 1 0 14 7 7 0 0 1-3.6-1l-.4-.2-2.3.6.6-2.2-.3-.4a7 7 0 0 1 6-10.8zm-3.1 3.9c-.2 0-.5.1-.7.3-.3.3-.9.8-.9 2s.9 2.3 1 2.5c.1.2 1.7 2.7 4.2 3.7 2.1.8 2.5.6 3 .6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5L9.8 9c-.2-.2-.4-.2-.6-.2h-.3z" />
+    </svg>
   );
 }

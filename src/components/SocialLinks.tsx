@@ -9,10 +9,17 @@ const icons: Record<SocialName, ComponentType<{ className?: string }>> = {
   TikTok: TikTokIcon,
 };
 
+const brandStyles: Partial<Record<SocialName, string>> = {
+  Facebook: 'border-[#1877F2]/35 bg-[#1877F2]/12 text-[#1877F2] hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white',
+  TikTok: 'border-white/20 bg-black text-white hover:border-[#25F4EE] hover:bg-black hover:text-[#25F4EE]',
+};
+
 export function SocialLinks({ className = '' }: { className?: string }) {
+  const visibleLinks = SOCIAL_LINKS.filter((link) => link.name !== 'WhatsApp');
+
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      {SOCIAL_LINKS.map((link) => {
+      {visibleLinks.map((link) => {
         const Icon = icons[link.name];
 
         return (
@@ -23,7 +30,9 @@ export function SocialLinks({ className = '' }: { className?: string }) {
             title={link.name}
             target={link.opensInNewTab === false ? undefined : '_blank'}
             rel={link.opensInNewTab === false ? undefined : 'noopener noreferrer'}
-            className="flex h-10 w-10 items-center justify-center rounded-[4px] border border-paper/12 bg-paper/5 text-paper/70 transition-colors hover:border-amber/50 hover:text-amber"
+            className={`flex h-10 w-10 items-center justify-center rounded-[4px] border transition-colors ${
+              brandStyles[link.name] ?? 'border-paper/12 bg-paper/5 text-paper/70 hover:border-amber/50 hover:text-amber'
+            }`}
           >
             <Icon className="h-5 w-5" />
           </a>
