@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/api/"],
     },
     sitemap: "https://calgaryprepexperts.com/sitemap.xml",
     host: "https://calgaryprepexperts.com",

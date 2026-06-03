@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { FAQS, SERVICES } from "@/constants";
 import "./globals.css";
 
 const interTight = Inter_Tight({
@@ -74,7 +75,6 @@ export const metadata: Metadata = {
 };
 
 const localBusinessJsonLd = {
-  "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://calgaryprepexperts.com/#business",
   name: "Calgary Prep Center",
@@ -141,6 +141,55 @@ const localBusinessJsonLd = {
   ],
 };
 
+const graphJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    localBusinessJsonLd,
+    {
+      "@type": "WebSite",
+      "@id": "https://calgaryprepexperts.com/#website",
+      url: "https://calgaryprepexperts.com",
+      name: "Calgary Prep Center",
+      publisher: { "@id": "https://calgaryprepexperts.com/#business" },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://calgaryprepexperts.com/#organization",
+      name: "Calgary Prep Center",
+      url: "https://calgaryprepexperts.com",
+      logo: "https://calgaryprepexperts.com/logo/logo.jpg",
+      email: "info@calgaryprepexperts.com",
+      telephone: "+1-825-561-7356",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://calgaryprepexperts.com/#faq",
+      mainEntity: FAQS.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a,
+        },
+      })),
+    },
+    ...SERVICES.map((service) => ({
+      "@type": "Service",
+      "@id": `https://calgaryprepexperts.com/#service-${service.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "")}`,
+      name: service.name,
+      description: service.desc,
+      provider: { "@id": "https://calgaryprepexperts.com/#business" },
+      areaServed: {
+        "@type": "City",
+        name: "Calgary",
+      },
+    })),
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -152,7 +201,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(graphJsonLd).replace(/</g, "\\u003c"),
           }}
         />
       </head>

@@ -15,7 +15,7 @@ const brandStyles: Partial<Record<SocialName, string>> = {
 };
 
 export function SocialLinks({ className = '' }: { className?: string }) {
-  const visibleLinks = SOCIAL_LINKS.filter((link) => link.name !== 'WhatsApp');
+  const visibleLinks = SOCIAL_LINKS.filter((link) => link.name !== 'WhatsApp' && link.href !== '#');
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
@@ -28,13 +28,13 @@ export function SocialLinks({ className = '' }: { className?: string }) {
             href={link.href}
             aria-label={link.ariaLabel}
             title={link.name}
-            target={link.opensInNewTab === false ? undefined : '_blank'}
-            rel={link.opensInNewTab === false ? undefined : 'noopener noreferrer'}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`flex h-10 w-10 items-center justify-center rounded-[4px] border transition-colors ${
               brandStyles[link.name] ?? 'border-paper/12 bg-paper/5 text-paper/70 hover:border-amber/50 hover:text-amber'
             }`}
           >
-            <Icon className="h-5 w-5" />
+            <Icon className="size-5" />
           </a>
         );
       })}
